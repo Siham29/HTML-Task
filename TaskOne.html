@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            color: black;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0%;
+
+        }
+
+        .flex-header {
+            background-image: linear-gradient(to top right, rgb(170, 170, 170), white);
+            min-height: 60px;
+            border-bottom: 1px solid black;
+        }
+
+        .flex-main {
+            display: flex;
+            flex: 1;
+            border-left: 1px solid black;
+
+        }
+
+        .flex-LeftSec {
+            background-color: rgb(151, 214, 239);
+            padding: 3rem;
+            padding-top: 250px;
+            text-align: center;
+            border-right: 1px solid black;
+
+        }
+
+        .flex-M {
+            background-color: rgb(227, 227, 168);
+            padding-top: 3rem;
+            flex: 2 2;
+            text-align: center;
+            padding-top: 250px;
+            font-size: 30px;
+            font-weight: 500;
+
+        }
+
+        .flex-footer {
+            background-color: rgb(19, 71, 117);
+            min-height: 40px;
+            color: white;
+            padding: 20px;
+            border-top: 1px solid black;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header class="flex-header" id="h">
+        Header
+        </br>
+        <button onclick="inc()">Add Content</button>
+        <button onclick="dec()">Remove Dynamic Content</button>
+        </br>
+        <div>Dynamic Content</div>
+    </header>
+
+    <div class="flex-main">
+        <div class="flex-LeftSec" id="l">
+            Left Section
+        </div>
+        <div class="flex-M">Main Content</div>
+    </div>
+    <footer class="flex-footer">Footer Section</footer>
+
+    <script>
+        var count = 0;
+        var temp = document.getElementById("h").innerHTML;
+        function inc() {
+            var x = document.getElementById("h");
+            x.innerHTML = x.innerHTML + 'Line ' + count + '</br>';
+            count++;
+        }
+
+        function dec() {
+
+            var x = document.getElementById("h");
+            x.innerHTML = temp;
+
+        }
+    </script>
+</body>
+
+</html>
